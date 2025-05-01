@@ -14,27 +14,49 @@ Even seasoned pros will learn something new. Both Windows &amp; macOS: Git, Zsh,
 
 ---
 
-## Table of Contents
-- [1. About This Repository](#1-about-this-repository)
-  - [1.1. Who Is This Tutorial For?](#11-who-is-this-tutorial-for)
-  - [1.2. What Will You Learn?](#12-what-will-you-learn)
-  - [1.3. Prerequisites](#13-prerequisites)
-  - [1.4. Project Structure](#14-project-structure)
-- [2. Windows](#2-windows)
-  - [2.1. Install WSL](#21-install-wsl)
-  - [2.2. Create user & password](#22-create-user--password)
-  - [2.3. Install Git](#23-install-git)
-  - [2.4. Install Zsh & Oh-My-Zsh](#24-install-zsh--oh-my-zsh)
-  - [2.5. Configure SSH & passkeys](#25-configure-ssh--passkeys)
-  - [2.6. Install Docker](#26-install-docker)
-  - [2.7. Install GitHub CLI (gh)](#27-install-github-cli-gh)
-- [3. macOS](#3-macos)
-  - [3.1. Install Git](#31-install-git)
-  - [3.2. Install Zsh & Oh-My-Zsh](#32-install-zsh--oh-my-zsh)
-  - [3.3. Configure SSH & passkeys](#33-configure-ssh--passkeys)
-  - [3.4. Install Docker](#34-install-docker)
-  - [3.5. Install GitHub CLI (gh)](#35-install-github-cli-gh)
-- [4. Contact Information](#4-contact-information)
+***Table of Contents***
+
+<details>
+  <summary><a href="#1-about-this-repository"><i><b>1. About This Repository</b></i></a></summary>
+  <div>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#11-who-is-this-tutorial-for">1.1. Who Is This Tutorial For?</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#12-what-will-you-learn">1.2. What Will You Learn?</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#13-prerequisites">1.3. Prerequisites</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#14-project-structure">1.4. Project Structure</a><br>
+  </div>
+</details>
+&nbsp;
+
+<details>
+  <summary><a href="#2-windows"><i><b>2. Windows</b></i></a></summary>
+  <div>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#21-install-wsl">2.1. Install WSL</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#22-create-user--password">2.2. Create user & password</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#23-install-git">2.3. Install Git</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#24-install-zsh--oh-my-zsh">2.4. Install Zsh & Oh-My-Zsh</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#25-configure-ssh--passkeys">2.5. Configure SSH & passkeys</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#26-install-docker">2.6. Install Docker</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#27-install-github-cli-gh">2.7. Install GitHub CLI (gh)</a><br>
+  </div>
+</details>
+&nbsp;
+
+<details>
+  <summary><a href="#3-macos"><i><b>3. macOS</b></i></a></summary>
+  <div>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#31-install-git">3.1. Install Git</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#32-install-zsh--oh-my-zsh">3.2. Install Zsh & Oh-My-Zsh</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#33-configure-ssh--passkeys">3.3. Configure SSH & passkeys</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#34-install-docker">3.4. Install Docker</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#35-install-github-cli-gh">3.5. Install GitHub CLI (gh)</a><br>
+  </div>
+</details>
+&nbsp;
+
+<div>
+  &nbsp;&nbsp;&nbsp;&nbsp;<a href="#4-contact-information"><i><b>4. Contact Information</b></i></a>
+</div>
+&nbsp;
 
 ---
 
@@ -96,6 +118,8 @@ VS Code is the go-to editor for most professionals; the best practice is to laun
 
 ## 2.1. Install WSL
 
+WSL (Windows Subsystem for Linux) creates a genuine Linux environment directly within Windows, without the overhead of a virtual machine. This is critical for professional development as it provides access to Linux tools, utilities, and command-line applications that are standard in the industry. Most deployment environments run Linux, so developing in a similar environment reduces "works on my machine" issues.
+
 1. Open PowerShell as Administrator
 2. Run the command:
    ```powershell
@@ -105,6 +129,8 @@ VS Code is the go-to editor for most professionals; the best practice is to laun
 4. WSL will finish the installation process automatically after restart
 
 ## 2.2. Create user & password
+
+Setting up a dedicated user account in your Linux environment establishes proper file permissions and security practices. This separation reflects real-world server configurations and builds good habits for professional development, where proper user management is essential for security and access control.
 
 When WSL first launches, you'll be prompted to create a username and password:
 
@@ -118,6 +144,8 @@ Even a simple password like "/" is acceptable as this is only for your local dev
 
 ## 2.3. Install Git
 
+Git is the industry-standard version control system used by virtually all professional development teams. It allows tracking changes, collaborating with others, and maintaining a complete history of your codebase. Git's distributed nature means you can work offline while still having the full project history, and its branching model enables parallel development workflows.
+
 ```bash
 sudo apt update
 sudo apt install git -y
@@ -125,6 +153,8 @@ git --version
 ```
 
 ## 2.4. Install Zsh & Oh-My-Zsh
+
+Zsh (Z Shell) is a powerful shell with improved features over the basic Bash shell, including better autocompletion, spelling correction, and plugin support. Oh-My-Zsh extends Zsh with a framework of plugins, themes, and helpers that dramatically improve your command-line productivity. Professional developers rely on efficient terminal workflows, and this combination provides substantial quality-of-life improvements.
 
 1. Install Zsh:
    ```bash
@@ -142,6 +172,8 @@ git --version
    ```
 
 ## 2.5. Configure SSH & passkeys
+
+SSH (Secure Shell) is the standard protocol for securely accessing remote servers and services. Setting up SSH keys eliminates the need for passwords when connecting to remote systems or services like GitHub. Passkeys represent the next evolution in authentication security, offering phishing-resistant, hardware-backed credentials. Together, they create a more secure and convenient workflow for professional developers who frequently interact with remote systems.
 
 1. Generate SSH key:
    ```bash
@@ -163,6 +195,8 @@ Follow GitHub's guide for adding SSH keys to your account: [GitHub Docs: Adding 
 
 ## 2.6. Install Docker
 
+Docker creates isolated containers that package applications with all their dependencies, ensuring consistent behavior across different environments. This solves the "it works on my machine" problem by providing a consistent runtime regardless of host system differences. For professional development, Docker enables efficient testing, simplified deployment, and collaboration by ensuring everyone uses identical environments.
+
 1. Install Docker Engine in WSL:
    ```bash
    sudo apt update
@@ -181,6 +215,8 @@ Follow GitHub's guide for adding SSH keys to your account: [GitHub Docs: Adding 
 3. Enable Docker Desktop WSL integration through Docker Desktop settings
 
 ## 2.7. Install GitHub CLI (gh)
+
+GitHub CLI (gh) brings the GitHub workflow directly to your terminal, eliminating the need to switch between browser and code editor. This command-line tool lets you create issues, manage pull requests, and perform other GitHub actions without leaving your terminal. For professionals, this streamlines workflow and keeps you focused on coding rather than context-switching between tools.
 
 1. Install GitHub CLI:
    ```bash
@@ -208,6 +244,8 @@ VS Code is the go-to editor for most professionals; the best practice is to laun
 
 ## 3.1. Install Git
 
+Git is the industry-standard version control system used by virtually all professional development teams. It allows tracking changes, collaborating with others, and maintaining a complete history of your codebase. Git's distributed nature means you can work offline while still having the full project history, and its branching model enables parallel development workflows.
+
 1. Install Homebrew if not already installed:
    ```bash
    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -221,6 +259,8 @@ VS Code is the go-to editor for most professionals; the best practice is to laun
 
 ## 3.2. Install Zsh & Oh-My-Zsh
 
+Zsh (Z Shell) is a powerful shell with improved features over the basic Bash shell, including better autocompletion, spelling correction, and plugin support. Oh-My-Zsh extends Zsh with a framework of plugins, themes, and helpers that dramatically improve your command-line productivity. Professional developers rely on efficient terminal workflows, and this combination provides substantial quality-of-life improvements.
+
 1. Zsh is the default shell on modern macOS. Verify with:
    ```bash
    echo $SHELL
@@ -232,6 +272,8 @@ VS Code is the go-to editor for most professionals; the best practice is to laun
    ```
 
 ## 3.3. Configure SSH & passkeys
+
+SSH (Secure Shell) is the standard protocol for securely accessing remote servers and services. Setting up SSH keys eliminates the need for passwords when connecting to remote systems or services like GitHub. Passkeys represent the next evolution in authentication security, offering phishing-resistant, hardware-backed credentials. Together, they create a more secure and convenient workflow for professional developers who frequently interact with remote systems.
 
 1. Generate SSH key:
    ```bash
@@ -253,6 +295,8 @@ Follow GitHub's guide for adding SSH keys to your account: [GitHub Docs: Adding 
 
 ## 3.4. Install Docker
 
+Docker creates isolated containers that package applications with all their dependencies, ensuring consistent behavior across different environments. This solves the "it works on my machine" problem by providing a consistent runtime regardless of host system differences. For professional development, Docker enables efficient testing, simplified deployment, and collaboration by ensuring everyone uses identical environments.
+
 1. Download Docker Desktop for Mac from [Docker's website](https://www.docker.com/products/docker-desktop/)
 2. Install the downloaded .dmg file
 3. Verify installation:
@@ -262,6 +306,8 @@ Follow GitHub's guide for adding SSH keys to your account: [GitHub Docs: Adding 
    ```
 
 ## 3.5. Install GitHub CLI (gh)
+
+GitHub CLI (gh) brings the GitHub workflow directly to your terminal, eliminating the need to switch between browser and code editor. This command-line tool lets you create issues, manage pull requests, and perform other GitHub actions without leaving your terminal. For professionals, this streamlines workflow and keeps you focused on coding rather than context-switching between tools.
 
 1. Install GitHub CLI using Homebrew:
    ```bash
