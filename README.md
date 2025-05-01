@@ -14,6 +14,58 @@ Even seasoned pros will learn something new. Both Windows &amp; macOS: Git, Zsh,
 
 ---
 
+# 1. About This Repository
+
+This repository provides a comprehensive guide to setting up a professional development environment on both Windows and macOS. It bridges the gap between casual coding and professional development by walking through industry-standard tools and practices that enhance productivity, collaboration, and code quality.
+
+## 1.1. Who Is This Tutorial For?
+
+This guide is designed for:
+- Software developers transitioning from casual to professional development
+- Computer Science students preparing for industry work
+- Self-taught programmers looking to adopt professional workflows
+- Experienced developers setting up a new system or standardizing their environment
+- Teams establishing consistent development environments across members
+
+No specific programming language knowledge is required, but basic familiarity with terminal/command-line operations is helpful.
+
+## 1.2. What Will You Learn?
+
+Following this guide, you will:
+- Set up a Linux-based development environment on Windows via WSL
+- Configure industry-standard shell environments with Zsh and Oh-My-Zsh
+- Establish secure SSH authentication with modern passkeys
+- Implement containerization with Docker for consistent development environments
+- Use GitHub CLI to streamline Git workflow and collaboration
+- Launch VS Code directly from your terminal for seamless integration
+
+## 1.3. Prerequisites
+
+Your prerequisites depend on your current experience level:
+
+1. **For experienced developers**: You can quickly scan through the guide to identify any tools or configurations you haven't yet adopted.
+2. **For developers new to professional setups**: Follow the guide sequentially, with extra attention to the SSH, Docker, and WSL sections.
+3. **For beginners**: Take time to understand each tool before implementing it. The guide provides context for why each tool matters in professional environments.
+
+Required:
+- Administrative access to your computer
+- Internet connection
+- ~5GB of free disk space (for Docker and WSL installations)
+
+## 1.4. Project Structure
+
+```
+Folder PATH listing
++---images                  <-- Contains visual assets
+│       banner.png          <-- Main repository banner
+│
+│       .gitignore          <-- Git exclusion patterns
+│       LICENSE             <-- Project license information
+│       README.md           <-- This documentation file
+```
+
+---
+
 ## Table of Contents
 - [Windows](#windows)
   - [Install WSL](#install-wsl)
