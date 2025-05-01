@@ -15,26 +15,26 @@ Even seasoned pros will learn something new. Both Windows &amp; macOS: Git, Zsh,
 ---
 
 ## Table of Contents
-- [About This Repository](#1-about-this-repository)
-  - [Who Is This Tutorial For?](#11-who-is-this-tutorial-for)
-  - [What Will You Learn?](#12-what-will-you-learn)
-  - [Prerequisites](#13-prerequisites)
-  - [Project Structure](#14-project-structure)
-- [Windows](#windows)
-  - [Install WSL](#install-wsl)
-  - [Create user & password](#create-user--password)
-  - [Install Git](#install-git)
-  - [Install Zsh & Oh-My-Zsh](#install-zsh--oh-my-zsh)
-  - [Configure SSH & passkeys](#configure-ssh--passkeys)
-  - [Install Docker](#install-docker)
-  - [Install GitHub CLI (gh)](#install-github-cli-gh)
-- [macOS](#macos)
-  - [Install Git](#install-git-1)
-  - [Install Zsh & Oh-My-Zsh](#install-zsh--oh-my-zsh-1)
-  - [Configure SSH & passkeys](#configure-ssh--passkeys-1)
-  - [Install Docker](#install-docker-1)
-  - [Install GitHub CLI (gh)](#install-github-cli-gh-1)
-- [Contact Information](#contact-information)
+- [1. About This Repository](#1-about-this-repository)
+  - [1.1. Who Is This Tutorial For?](#11-who-is-this-tutorial-for)
+  - [1.2. What Will You Learn?](#12-what-will-you-learn)
+  - [1.3. Prerequisites](#13-prerequisites)
+  - [1.4. Project Structure](#14-project-structure)
+- [2. Windows](#2-windows)
+  - [2.1. Install WSL](#21-install-wsl)
+  - [2.2. Create user & password](#22-create-user--password)
+  - [2.3. Install Git](#23-install-git)
+  - [2.4. Install Zsh & Oh-My-Zsh](#24-install-zsh--oh-my-zsh)
+  - [2.5. Configure SSH & passkeys](#25-configure-ssh--passkeys)
+  - [2.6. Install Docker](#26-install-docker)
+  - [2.7. Install GitHub CLI (gh)](#27-install-github-cli-gh)
+- [3. macOS](#3-macos)
+  - [3.1. Install Git](#31-install-git)
+  - [3.2. Install Zsh & Oh-My-Zsh](#32-install-zsh--oh-my-zsh)
+  - [3.3. Configure SSH & passkeys](#33-configure-ssh--passkeys)
+  - [3.4. Install Docker](#34-install-docker)
+  - [3.5. Install GitHub CLI (gh)](#35-install-github-cli-gh)
+- [4. Contact Information](#4-contact-information)
 
 ---
 
@@ -90,11 +90,11 @@ Folder PATH listing
 
 ---
 
-# Windows
+# 2. Windows
 
 VS Code is the go-to editor for most professionals; the best practice is to launch it from the terminal and keep all code inside a Linux-based folder structure. We'll set that up now.
 
-## Install WSL
+## 2.1. Install WSL
 
 1. Open PowerShell as Administrator
 2. Run the command:
@@ -104,7 +104,7 @@ VS Code is the go-to editor for most professionals; the best practice is to laun
 3. Restart your computer
 4. WSL will finish the installation process automatically after restart
 
-## Create user & password
+## 2.2. Create user & password
 
 When WSL first launches, you'll be prompted to create a username and password:
 
@@ -116,7 +116,7 @@ Retype new password:
 
 Even a simple password like "/" is acceptable as this is only for your local development environment.
 
-## Install Git
+## 2.3. Install Git
 
 ```bash
 sudo apt update
@@ -124,7 +124,7 @@ sudo apt install git -y
 git --version
 ```
 
-## Install Zsh & Oh-My-Zsh
+## 2.4. Install Zsh & Oh-My-Zsh
 
 1. Install Zsh:
    ```bash
@@ -141,7 +141,7 @@ git --version
    chsh -s $(which zsh)
    ```
 
-## Configure SSH & passkeys
+## 2.5. Configure SSH & passkeys
 
 1. Generate SSH key:
    ```bash
@@ -161,7 +161,7 @@ git --version
 
 Follow GitHub's guide for adding SSH keys to your account: [GitHub Docs: Adding a new SSH key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
 
-## Install Docker
+## 2.6. Install Docker
 
 1. Install Docker Engine in WSL:
    ```bash
@@ -180,7 +180,7 @@ Follow GitHub's guide for adding SSH keys to your account: [GitHub Docs: Adding 
 
 3. Enable Docker Desktop WSL integration through Docker Desktop settings
 
-## Install GitHub CLI (gh)
+## 2.7. Install GitHub CLI (gh)
 
 1. Install GitHub CLI:
    ```bash
@@ -202,11 +202,11 @@ Follow GitHub's guide for adding SSH keys to your account: [GitHub Docs: Adding 
 
 ---
 
-# macOS
+# 3. macOS
 
 VS Code is the go-to editor for most professionals; the best practice is to launch it from the terminal for seamless integration with your development environment.
 
-## Install Git
+## 3.1. Install Git
 
 1. Install Homebrew if not already installed:
    ```bash
@@ -219,7 +219,7 @@ VS Code is the go-to editor for most professionals; the best practice is to laun
    git --version
    ```
 
-## Install Zsh & Oh-My-Zsh
+## 3.2. Install Zsh & Oh-My-Zsh
 
 1. Zsh is the default shell on modern macOS. Verify with:
    ```bash
@@ -231,7 +231,7 @@ VS Code is the go-to editor for most professionals; the best practice is to laun
    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
    ```
 
-## Configure SSH & passkeys
+## 3.3. Configure SSH & passkeys
 
 1. Generate SSH key:
    ```bash
@@ -251,7 +251,7 @@ VS Code is the go-to editor for most professionals; the best practice is to laun
 
 Follow GitHub's guide for adding SSH keys to your account: [GitHub Docs: Adding a new SSH key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
 
-## Install Docker
+## 3.4. Install Docker
 
 1. Download Docker Desktop for Mac from [Docker's website](https://www.docker.com/products/docker-desktop/)
 2. Install the downloaded .dmg file
@@ -261,7 +261,7 @@ Follow GitHub's guide for adding SSH keys to your account: [GitHub Docs: Adding 
    docker run hello-world
    ```
 
-## Install GitHub CLI (gh)
+## 3.5. Install GitHub CLI (gh)
 
 1. Install GitHub CLI using Homebrew:
    ```bash
@@ -280,7 +280,7 @@ Follow GitHub's guide for adding SSH keys to your account: [GitHub Docs: Adding 
 
 ---
 
-# Contact Information
+# 4. Contact Information
 
 For questions not addressed in the resources above, please connect with [Mostafa Rezaee](https://www.linkedin.com/in/mostafa-rezaee/) on LinkedIn for personalized assistance.
 
