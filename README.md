@@ -14,6 +14,29 @@ Even seasoned pros will learn something new. Both Windows &amp; macOS: Git, Zsh,
 
 ---
 
+## Table of Contents
+- [About This Repository](#1-about-this-repository)
+  - [Who Is This Tutorial For?](#11-who-is-this-tutorial-for)
+  - [What Will You Learn?](#12-what-will-you-learn)
+  - [Prerequisites](#13-prerequisites)
+  - [Project Structure](#14-project-structure)
+- [Windows](#windows)
+  - [Install WSL](#install-wsl)
+  - [Create user & password](#create-user--password)
+  - [Install Git](#install-git)
+  - [Install Zsh & Oh-My-Zsh](#install-zsh--oh-my-zsh)
+  - [Configure SSH & passkeys](#configure-ssh--passkeys)
+  - [Install Docker](#install-docker)
+  - [Install GitHub CLI (gh)](#install-github-cli-gh)
+- [macOS](#macos)
+  - [Install Git](#install-git-1)
+  - [Install Zsh & Oh-My-Zsh](#install-zsh--oh-my-zsh-1)
+  - [Configure SSH & passkeys](#configure-ssh--passkeys-1)
+  - [Install Docker](#install-docker-1)
+  - [Install GitHub CLI (gh)](#install-github-cli-gh-1)
+
+---
+
 # 1. About This Repository
 
 This repository provides a comprehensive guide to setting up a professional development environment on both Windows and macOS. It bridges the gap between casual coding and professional development by walking through industry-standard tools and practices that enhance productivity, collaboration, and code quality.
@@ -63,24 +86,6 @@ Folder PATH listing
 │       LICENSE             <-- Project license information
 │       README.md           <-- This documentation file
 ```
-
----
-
-## Table of Contents
-- [Windows](#windows)
-  - [Install WSL](#install-wsl)
-  - [Create user & password](#create-user--password)
-  - [Install Git](#install-git)
-  - [Install Zsh & Oh-My-Zsh](#install-zsh--oh-my-zsh)
-  - [Configure SSH & passkeys](#configure-ssh--passkeys)
-  - [Install Docker](#install-docker)
-  - [Install GitHub CLI (gh)](#install-github-cli-gh)
-- [macOS](#macos)
-  - [Install Git](#install-git-1)
-  - [Install Zsh & Oh-My-Zsh](#install-zsh--oh-my-zsh-1)
-  - [Configure SSH & passkeys](#configure-ssh--passkeys-1)
-  - [Install Docker](#install-docker-1)
-  - [Install GitHub CLI (gh)](#install-github-cli-gh-1)
 
 ---
 
