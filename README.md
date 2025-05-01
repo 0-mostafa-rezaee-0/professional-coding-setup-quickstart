@@ -34,6 +34,7 @@ Even seasoned pros will learn something new. Both Windows &amp; macOS: Git, Zsh,
   - [Configure SSH & passkeys](#configure-ssh--passkeys-1)
   - [Install Docker](#install-docker-1)
   - [Install GitHub CLI (gh)](#install-github-cli-gh-1)
+- [Contact Information](#contact-information)
 
 ---
 
@@ -276,4 +277,10 @@ Follow GitHub's guide for adding SSH keys to your account: [GitHub Docs: Adding 
    ```bash
    gh repo clone owner/repository
    ```
+
+---
+
+# Contact Information
+
+For questions not addressed in the resources above, please connect with [Mostafa Rezaee](https://www.linkedin.com/in/mostafa-rezaee/) on LinkedIn for personalized assistance.
 
