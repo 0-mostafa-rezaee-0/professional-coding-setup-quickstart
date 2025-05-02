@@ -47,3 +47,36 @@ For more inspiration and examples on how to enhance your GitHub presence and per
 [Personal Branding on GitHub](https://github.com/stars/0-mostafa-rezaee-0/lists/personal-branding)
 
 This collection includes ATS-optimized resume templates and examples of polished GitHub profiles that effectively showcase skills and professional stories. Reviewing these resources can help you create a more impactful online presence for potential employers and collaborators.
+
+## Template Repositories
+
+GitHub allows you to create template repositories that can serve as a starting point for new projects. This feature is especially useful for:
+
+- Standardizing project structures across an organization
+- Quickly bootstrapping new projects with boilerplate code
+- Ensuring consistent development environments
+- Sharing best practices with the community
+
+### Creating a Template Repository
+
+1. **Create a new repository or use an existing one**
+   - Add all the files, folder structure, and documentation you want to include
+   - Make sure to include a comprehensive README.md explaining how to use the template
+
+2. **Convert to a template**
+   - Go to the repository settings
+   - Check the "Template repository" option under the "General" tab
+   - Save changes
+
+3. **Using your template**
+   - When creating a new repository, you'll see an option to use a template
+   - Select your template repository
+   - The new repository will be created with all the files and structure from the template
+
+### Template Resources
+
+For examples of well-structured template repositories covering various technologies and use cases, check out this curated list:
+
+[GitHub Templates Collection](https://github.com/stars/0-mostafa-rezaee-0/lists/templates)
+
+This collection includes templates for ML APIs with FastAPI, Docker configurations for data science projects, professional GitHub profile setups, and more. Using these templates can significantly speed up your project setup and ensure you follow best practices from the start.
