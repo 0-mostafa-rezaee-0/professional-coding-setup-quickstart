@@ -152,6 +152,129 @@ sudo apt install git -y
 git --version
 ```
 
+### 2.3.1. Git Commands (frequently used)
+
+**Step 3:** Daily workflow commands (used in sequence)
+```bash
+1. git pull                                      # Pull latest changes from remote repository
+2. git status                                    # Check status of working directory
+3. git add .                                     # Stage all changes for commit
+4. git status                                    # Verify staged changes
+5. git commit -m "A relevant title for the commit"  # Commit staged changes with a descriptive message
+6. git push                                      # Push commits to remote repository
+```
+
+**Step 2:** Clone an existing repository (once per repository)
+```bash
+# Clone a repository
+git clone git@gitlab.com:mostafa.mohammadrezaee/git-commands.git
+cd repo
+```
+
+**Step 1:** Create a new repository (once per repository)
+```bash
+# Create a new repository on GitHub and clone it.
+```
+
+### 2.3.2. Professional Git Configuration
+
+For recommended Git configuration, follow these steps in order:
+
+1. Set VS Code as the default editor for Git
+   ```bash
+   git config --global core.editor "code --wait"
+   ```
+
+2. Edit Git configuration file
+   ```bash
+   git config --global --edit
+   ```
+
+   After the file opens, add or edit these settings (replace "your name" and "your gmail" with your actual name and email, and "username" with your Linux username):
+   ```bash
+   [user]
+     name = your name
+     email = your gmail
+   
+   [init]
+     defaultBranch = main
+   
+   [core]
+     excludesfile = /home/username/.gitignore_global
+     editor = code --wait
+   
+   [diff]
+     editor = code --wait
+   
+   [difftool "vscode"]
+     cmd = code --wait --diff $LOCAL $REMOTE
+   ```
+
+### 2.3.3. Best Practices for .gitignore
+
+Setting up a proper .gitignore configuration helps keep your repository clean by excluding temporary files, build artifacts, and environment-specific files from version control.
+
+**One-time setup (steps 1-4):**
+
+1. Create a global .gitignore file:
+   ```bash
+   touch ~/.gitignore_global
+   ```
+
+2. Configure Git to use this global file:
+   ```bash
+   git config --global core.excludesfile ~/.gitignore_global
+   ```
+
+3. Create a comprehensive .gitignore using [gitignore.io](https://www.gitignore.io/) with the following settings:
+   - python
+   - jupyternotebooks
+   - visualstudiocode
+   - linux
+   - windows
+   - macos
+   - venv
+
+4. Add the following custom entries at the top of the file:
+   ```
+   # Two Sections: 
+   ## Section 1: Created by authors
+   ## Section 2: Created by gitignore.io
+
+   # Section 1--------------------------------------------------
+   # Created by authors 
+
+   tree.txt
+
+   # To prevent Zone.Identifier files
+   *Zone.Identifier
+
+   # Conda environments
+   *.conda
+   *.env
+   *.envs
+   .env/
+   .envs/
+
+   # Section 2--------------------------------------------------
+   # Created by gitignore.io
+   ```
+
+**For each new repository (steps 5-7):**
+
+5. Create a project-specific .gitignore and copy the global settings:
+   ```bash
+   cat ~/.gitignore_global >> .gitignore
+   ```
+
+6. To add new global rules, manually edit the global .gitignore file and add entries to Section 1.
+
+7. For project-specific exclusions, add them to the top of the project's .gitignore file:
+   ```
+   # Section 0--------------------------------------------------
+   # Project-specific rules
+   ```
+
 ## 2.4. Install Zsh & Oh-My-Zsh
 
 Zsh (Z Shell) is a powerful shell with improved features over the basic Bash shell, including better autocompletion, spelling correction, and plugin support. Oh-My-Zsh extends Zsh with a framework of plugins, themes, and helpers that dramatically improve your command-line productivity. Professional developers rely on efficient terminal workflows, and this combination provides substantial quality-of-life improvements.
@@ -236,6 +359,71 @@ GitHub CLI (gh) brings the GitHub workflow directly to your terminal, eliminatin
    gh repo clone owner/repository
    ```
 
+### 2.7.1. Practical GitHub CLI Commands
+
+**Repository Management:**
+```bash
+# List repositories
+gh repo list
+
+# Create a new repository
+gh repo create my-project --public
+
+# Clone a repository
+gh repo clone owner/repository
+
+# Fork a repository
+gh repo fork owner/repository
+
+# View repository details
+gh repo view owner/repository
+```
+
+**Issue Management:**
+```bash
+# List open issues
+gh issue list
+
+# Create a new issue
+gh issue create --title "Bug: Login page not working" --body "Description of the issue"
+
+# View an issue
+gh issue view ISSUE_NUMBER
+
+# Close an issue
+gh issue close ISSUE_NUMBER
+```
+
+**Pull Request Workflow:**
+```bash
+# Create a pull request
+gh pr create --title "Feature: Add login functionality" --body "Description of the changes"
+
+# List open pull requests
+gh pr list
+
+# View a pull request
+gh pr view PR_NUMBER
+
+# Check out a pull request locally
+gh pr checkout PR_NUMBER
+
+# Merge a pull request
+gh pr merge PR_NUMBER
+```
+
+**Release Management:**
+```bash
+# Create a new release
+gh release create v1.0.0 --title "Version 1.0.0" --notes "Release notes here"
+
+# List releases
+gh release list
+
+# Download release assets
+gh release download TAG_NAME
+```
+
 ---
 
 # 3. macOS
@@ -255,6 +443,129 @@ Git is the industry-standard version control system used by virtually all profes
    ```bash
    brew install git
    git --version
+   ```
+
+### 3.1.1. Git Commands (frequently used)
+
+**Step 3:** Daily workflow commands (used in sequence)
+```bash
+1. git pull                                      # Pull latest changes from remote repository
+2. git status                                    # Check status of working directory
+3. git add .                                     # Stage all changes for commit
+4. git status                                    # Verify staged changes
+5. git commit -m "A relevant title for the commit"  # Commit staged changes with a descriptive message
+6. git push                                      # Push commits to remote repository
+```
+
+**Step 2:** Clone an existing repository (once per repository)
+```bash
+# Clone a repository
+git clone git@gitlab.com:mostafa.mohammadrezaee/git-commands.git
+cd repo
+```
+
+**Step 1:** Create a new repository (once per repository)
+```bash
+# Create a new repository on GitHub and clone it.
+```
+
+### 3.1.2. Professional Git Configuration
+
+For recommended Git configuration, follow these steps in order:
+
+1. Set VS Code as the default editor for Git
+   ```bash
+   git config --global core.editor "code --wait"
+   ```
+
+2. Edit Git configuration file
+   ```bash
+   git config --global --edit
+   ```
+
+   After the file opens, add or edit these settings (replace "your name" and "your gmail" with your actual name and email, and "username" with your macOS username):
+   ```bash
+   [user]
+     name = your name
+     email = your gmail
+   
+   [init]
+     defaultBranch = main
+   
+   [core]
+     excludesfile = /Users/username/.gitignore_global
+     editor = code --wait
+   
+   [diff]
+     editor = code --wait
+   
+   [difftool "vscode"]
+     cmd = code --wait --diff $LOCAL $REMOTE
+   ```
+
+### 3.1.3. Best Practices for .gitignore
+
+Setting up a proper .gitignore configuration helps keep your repository clean by excluding temporary files, build artifacts, and environment-specific files from version control.
+
+**One-time setup (steps 1-4):**
+
+1. Create a global .gitignore file:
+   ```bash
+   touch ~/.gitignore_global
+   ```
+
+2. Configure Git to use this global file:
+   ```bash
+   git config --global core.excludesfile ~/.gitignore_global
+   ```
+
+3. Create a comprehensive .gitignore using [gitignore.io](https://www.gitignore.io/) with the following settings:
+   - python
+   - jupyternotebooks
+   - visualstudiocode
+   - linux
+   - windows
+   - macos
+   - venv
+
+4. Add the following custom entries at the top of the file:
+   ```
+   # Two Sections: 
+   ## Section 1: Created by authors
+   ## Section 2: Created by gitignore.io
+
+   # Section 1--------------------------------------------------
+   # Created by authors 
+
+   tree.txt
+
+   # To prevent Zone.Identifier files
+   *Zone.Identifier
+
+   # Conda environments
+   *.conda
+   *.env
+   *.envs
+   .env/
+   .envs/
+
+   # Section 2--------------------------------------------------
+   # Created by gitignore.io
+   ```
+
+**For each new repository (steps 5-7):**
+
+5. Create a project-specific .gitignore and copy the global settings:
+   ```bash
+   cat ~/.gitignore_global >> .gitignore
+   ```
+
+6. To add new global rules, manually edit the global .gitignore file and add entries to Section 1.
+
+7. For project-specific exclusions, add them to the top of the project's .gitignore file:
+   ```
+   # Section 0--------------------------------------------------
+   # Project-specific rules
    ```
 
 ## 3.2. Install Zsh & Oh-My-Zsh
